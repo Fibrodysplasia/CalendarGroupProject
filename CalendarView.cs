@@ -427,6 +427,30 @@ namespace CalendarProject
                         return;
                     }
 
+                    // temporary event to check for conflicts
+                    Event updatedEvent = new Event(
+                        txtTitle.Text,
+                        dtpDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay),
+                        dtpDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay)
+                    );
+                    updatedEvent.Id = eventToEdit.Id;
+                    updatedEvent.Owner = eventToEdit.Owner;
+
+                    // Check for conflicts, also fix return to calendar
+                    if (currentUser.HasEventConflict(updatedEvent))
+                    {
+                        MessageBox.Show("Failed to update event. There may be a scheduling conflict.",
+                                      "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    eventToEdit.Title = updatedEvent.Title;
+                    eventToEdit.StartTime = updatedEvent.StartTime;
+                    eventToEdit.EndTime = updatedEvent.EndTime;
+
+                    MessageBox.Show($"Event '{eventToEdit.Title}' updated",
+                                  "Event Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     editForm.DialogResult = DialogResult.OK;
                 };
 
@@ -451,34 +475,35 @@ namespace CalendarProject
 
                 if (editForm.ShowDialog() == DialogResult.OK)
                 {
+                    // this is duplicating events
                     // copy the event to check for conflicts
-                    Event updatedEvent = new Event(
-                        txtTitle.Text,
-                        dtpDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay),
-                        dtpDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay)
-                    );
-                    updatedEvent.Id = eventToEdit.Id;
-                    updatedEvent.Owner = eventToEdit.Owner;
-                    bool updated = false;
+                    //Event updatedEvent = new Event(
+                    //    txtTitle.Text,
+                    //    dtpDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay),
+                    //    dtpDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay)
+                    //);
+                    //updatedEvent.Id = eventToEdit.Id;
+                    //updatedEvent.Owner = eventToEdit.Owner;
+                    //bool updated = false;
 
-                    // remove old
-                    if (currentUser.DeleteEvent(eventToEdit))
-                    {
-                        // add new
-                        updated = currentUser.AddEvent(updatedEvent);
-                    }
+                    //// remove old
+                    //if (currentUser.DeleteEvent(eventToEdit))
+                    //{
+                    //    // add new
+                    //    updated = currentUser.AddEvent(updatedEvent);
+                    //}
 
-                    if (updated)
-                    {
-                        MessageBox.Show($"Event '{updatedEvent.Title}' updated",
-                                      "Event Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        currentUser.AddEvent(eventToEdit);
-                        MessageBox.Show("Failed to update event. There may be a scheduling conflict.",
-                                      "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //if (updated)
+                    //{
+                    //    MessageBox.Show($"Event '{updatedEvent.Title}' updated",
+                    //                  "Event Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //}
+                    //else
+                    //{
+                    //    currentUser.AddEvent(eventToEdit);
+                    //    MessageBox.Show("Failed to update event. There may be a scheduling conflict.",
+                    //                  "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
 
                     // Refresh calendar
                     GenerateCalendar(currentYear, currentMonth);
