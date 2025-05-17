@@ -475,6 +475,7 @@ namespace CalendarProject
                     }
                     else
                     {
+                        currentUser.AddEvent(eventToEdit);
                         MessageBox.Show("Failed to update event. There may be a scheduling conflict.",
                                       "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
