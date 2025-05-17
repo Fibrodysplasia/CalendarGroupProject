@@ -1,0 +1,585 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler * 1159120
+{ CGEMdiWorkspace 
+	- stubList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- myViewsWithID = { IRPYRawContainer 
+		- size = 20;
+		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 286;
+				- m_nTop = 286;
+				- m_nRight = 687;
+				- m_nBottom = 878;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Calendar";
+				- _id = GUID d0af81ae-a98a-4ff3-b304-f3fea7a1e4ed;
+			}
+			- _UpLeft = 59 10 ;
+			- _DownRight = 271 318 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 16;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 260;
+				- m_nTop = 260;
+				- m_nRight = 396;
+				- m_nBottom = 852;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IUCDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "CalendarUseCase";
+				- _id = GUID 5fc40952-4074-4f64-afac-d0388bd7af27;
+			}
+			- _UpLeft = 185 0 ;
+			- _DownRight = 292 540 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 17;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 182;
+				- m_nTop = 182;
+				- m_nRight = 567;
+				- m_nBottom = 769;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Add Event";
+				- _name = "ActivityDiagram";
+				- _id = GUID 34ca6af8-5e31-41d3-bf03-c8ca2a8e82a3;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 339 490 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 11;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 26;
+				- m_nTop = 26;
+				- m_nRight = 394;
+				- m_nBottom = 613;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Add Event";
+				- _name = "StatechartDiagram";
+				- _id = GUID 40ce4b55-8fee-4933-a1a8-cf0f503d46fe;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 339 535 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 6;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 260;
+				- m_nTop = 260;
+				- m_nRight = 733;
+				- m_nBottom = 847;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Add Meeting";
+				- _name = "ActivityDiagram";
+				- _id = GUID 384dcd3d-87c7-4ff6-8472-2934868d89d4;
+			}
+			- _UpLeft = 0 100 ;
+			- _DownRight = 404 568 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 8;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 156;
+				- m_nTop = 156;
+				- m_nRight = 604;
+				- m_nBottom = 743;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Add Meeting";
+				- _name = "StatechartDiagram";
+				- _id = GUID 219df918-70cc-44f2-8453-e1dc4c25a912;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 419 535 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 234;
+				- m_nTop = 234;
+				- m_nRight = 707;
+				- m_nBottom = 821;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Delete Event";
+				- _name = "ActivityDiagram";
+				- _id = GUID f258e561-21ae-4aa5-bc2f-5121ad9469cd;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 444 515 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 9;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 130;
+				- m_nTop = 130;
+				- m_nRight = 498;
+				- m_nBottom = 717;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Delete Event";
+				- _name = "StatechartDiagram";
+				- _id = GUID 24908f68-346d-43f0-887e-7d5ee0c86650;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 251 396 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 473;
+				- m_nBottom = 587;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Delete Meeting";
+				- _name = "ActivityDiagram";
+				- _id = GUID 21ad524f-f577-4e26-88f0-ef51f50b06a9;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 444 515 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 7;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 182;
+				- m_nTop = 182;
+				- m_nRight = 630;
+				- m_nBottom = 769;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Delete Meeting";
+				- _name = "StatechartDiagram";
+				- _id = GUID c7491ab6-6624-4d9b-8557-44dceffa2e81;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 419 535 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 208;
+				- m_nTop = 208;
+				- m_nRight = 593;
+				- m_nBottom = 795;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Edit Event";
+				- _name = "ActivityDiagram";
+				- _id = GUID bffadfee-4823-41b8-8c2f-62a7f31f93a8;
+			}
+			- _UpLeft = 0 20 ;
+			- _DownRight = 624 753 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 10;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 104;
+				- m_nTop = 104;
+				- m_nRight = 472;
+				- m_nBottom = 691;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Edit Event";
+				- _name = "StatechartDiagram";
+				- _id = GUID 951c744b-7554-4960-b5eb-56ece69df2d6;
+			}
+			- _UpLeft = 20 0 ;
+			- _DownRight = 359 535 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 3;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 78;
+				- m_nTop = 78;
+				- m_nRight = 561;
+				- m_nBottom = 670;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Login";
+				- _name = "ActivityDiagram";
+				- _id = GUID d0762543-ac09-471f-94ed-4b73f2184c20;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 413 491 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 78;
+				- m_nTop = 78;
+				- m_nRight = 561;
+				- m_nBottom = 670;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Login";
+				- _name = "ActivityDiagram";
+				- _id = GUID d0762543-ac09-471f-94ed-4b73f2184c20;
+			}
+			- _UpLeft = 234 0 ;
+			- _DownRight = 615 454 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 13;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 52;
+				- m_nTop = 52;
+				- m_nRight = 420;
+				- m_nBottom = 639;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Login";
+				- _name = "StatechartDiagram";
+				- _id = GUID 12353ff3-415f-4863-9cdf-cc68b65bb684;
+			}
+			- _UpLeft = 30 19 ;
+			- _DownRight = 353 528 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 5;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 104;
+				- m_nTop = 104;
+				- m_nRight = 587;
+				- m_nBottom = 696;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Logout";
+				- _name = "ActivityDiagram";
+				- _id = GUID e6c875a5-76b2-48fd-8edd-12adb0a8566e;
+			}
+			- _UpLeft = 0 60 ;
+			- _DownRight = 1204 917 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 104;
+				- m_nTop = 104;
+				- m_nRight = 587;
+				- m_nBottom = 696;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IActivityDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Logout";
+				- _name = "ActivityDiagram";
+				- _id = GUID e6c875a5-76b2-48fd-8edd-12adb0a8566e;
+			}
+			- _UpLeft = 186 211 ;
+			- _DownRight = 649 762 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 12;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 78;
+				- m_nTop = 78;
+				- m_nRight = 446;
+				- m_nBottom = 665;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Logout";
+				- _name = "StatechartDiagram";
+				- _id = GUID bb16ce49-a9db-40dc-a9b6-af45643b5c77;
+			}
+			- _UpLeft = 0 50 ;
+			- _DownRight = 251 446 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 4;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 26;
+				- m_nTop = 26;
+				- m_nRight = 509;
+				- m_nBottom = 618;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IMSC";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Login";
+				- _id = GUID 145504df-c406-4e88-a7bf-94ffe46a8955;
+			}
+			- _UpLeft = 151 0 ;
+			- _DownRight = 605 520 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 15;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 78;
+				- m_nTop = 78;
+				- m_nRight = 343;
+				- m_nBottom = 628;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IMSC";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Logout";
+				- _id = GUID 58017895-a6be-470f-a04e-cf621bb67866;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 236 478 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 14;
+		}
+	}
+	- _fullName = "C:\\Users\\wdmcd\\OneDrive\\Desktop\\csc834\\Calendar\\Calendar";
+	- m_SearchScopeList = { IRPYRawContainer 
+		- size = 0;
+	}
+
+	- m_favoritesTree = {
+		count=1;
+		{ - favoritesItem
+			generation = 0;
+			name = Favorites;
+			idOrFolder = folder;
+		}
+	}
+
+}
+
