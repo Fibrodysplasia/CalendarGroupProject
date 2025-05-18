@@ -30,7 +30,7 @@ namespace CalendarProject
                 string configPath = "config.ini";
                 if (!File.Exists(configPath))
                 {
-                    // Use a default connection string for development or throw an error
+                    // Use a default connection string for development
                     _connectionString = "Server=localhost;Port=3306;Database=calendar_db;Uid=root;Pwd=password;";
                     Debug.WriteLine("Warning: config.ini not found. Using default connection string.");
                     return;

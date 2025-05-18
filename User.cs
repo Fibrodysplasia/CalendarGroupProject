@@ -122,33 +122,33 @@ namespace CalendarProject
                 conn.Open();
 
                 // debugging
-                using (MySqlCommand describeCmd = new MySqlCommand($"DESCRIBE 834_sp25_t6_users;", conn))
-                {
-                    using (MySqlDataReader descReader = describeCmd.ExecuteReader())
-                    {
-                        Debug.WriteLine("User table structure:");
-                        while (descReader.Read())
-                        {
-                            Debug.WriteLine($"- {descReader["Field"]} ({descReader["Type"]})");
-                        }
-                    }
-                }
+                //using (MySqlCommand describeCmd = new MySqlCommand($"DESCRIBE 834_sp25_t6_users;", conn))
+                //{
+                //    using (MySqlDataReader descReader = describeCmd.ExecuteReader())
+                //    {
+                //        Debug.WriteLine("User table structure:");
+                //        while (descReader.Read())
+                //        {
+                //            Debug.WriteLine($"- {descReader["Field"]} ({descReader["Type"]})");
+                //        }
+                //    }
+                //}
 
                 // more debugging
-                using (MySqlCommand sampleCmd = new MySqlCommand($"SELECT * FROM 834_sp25_t6_users LIMIT 1;", conn))
-                {
-                    using (MySqlDataReader sampleReader = sampleCmd.ExecuteReader())
-                    {
-                        if (sampleReader.Read())
-                        {
-                            Debug.WriteLine("Sample user data format:");
-                            for (int i = 0; i < sampleReader.FieldCount; i++)
-                            {
-                                Debug.WriteLine($"- {sampleReader.GetName(i)}: {sampleReader[i]}");
-                            }
-                        }
-                    }
-                }
+                //using (MySqlCommand sampleCmd = new MySqlCommand($"SELECT * FROM 834_sp25_t6_users LIMIT 1;", conn))
+                //{
+                //    using (MySqlDataReader sampleReader = sampleCmd.ExecuteReader())
+                //    {
+                //        if (sampleReader.Read())
+                //        {
+                //            Debug.WriteLine("Sample user data format:");
+                //            for (int i = 0; i < sampleReader.FieldCount; i++)
+                //            {
+                //                Debug.WriteLine($"- {sampleReader.GetName(i)}: {sampleReader[i]}");
+                //            }
+                //        }
+                //    }
+                //}
 
                 // attempt login
                 MySqlCommand cmd = new MySqlCommand(Database.SQL_GET_USER_BY_USERNAME, conn);
