@@ -345,7 +345,7 @@ namespace CalendarProject
             using (Form editForm = new Form())
             {
                 editForm.Width = 300;
-                editForm.Height = 400;
+                editForm.Height = 500;
                 editForm.Text = "Edit Event";
 
                 // Title
@@ -372,34 +372,46 @@ namespace CalendarProject
                 //};
 
                 // Date picker
-                Label lblDate = new Label() { Left = 20, Top = 160, Text = "Date:" };
-                DateTimePicker dtpDate = new DateTimePicker()
+                //Start Date
+                Label lblStartDate = new Label() { Left = 20, Top = 80, Text = "Start Date:" };
+                DateTimePicker dtpStartDate = new DateTimePicker()
                 {
                     Left = 20,
-                    Top = 180,
+                    Top = 100,
                     Width = 240,
                     Format = DateTimePickerFormat.Short,
                     Value = eventToEdit.StartTime.Date
                 };
 
                 // Start time
-                Label lblStartTime = new Label() { Left = 20, Top = 210, Text = "Start Time:" };
+                Label lblStartTime = new Label() { Left = 20, Top = 130, Text = "Start Time:" };
                 DateTimePicker dtpStartTime = new DateTimePicker()
                 {
                     Left = 20,
-                    Top = 230,
+                    Top = 150,
                     Width = 240,
                     Format = DateTimePickerFormat.Time,
                     ShowUpDown = true,
                     Value = eventToEdit.StartTime
                 };
 
+                // End Date
+                Label lblEndDate = new Label() { Left = 20, Top = 180, Text = "End Date:" };
+                DateTimePicker dtpEndDate = new DateTimePicker()
+                {
+                    Left = 20,
+                    Top = 200,
+                    Width = 240,
+                    Format = DateTimePickerFormat.Short,
+                    Value = eventToEdit.EndTime.Date
+                };
+
                 // End time
-                Label lblEndTime = new Label() { Left = 20, Top = 260, Text = "End Time:" };
+                Label lblEndTime = new Label() { Left = 20, Top = 230, Text = "End Time:" };
                 DateTimePicker dtpEndTime = new DateTimePicker()
                 {
                     Left = 20,
-                    Top = 280,
+                    Top = 250,
                     Width = 240,
                     Format = DateTimePickerFormat.Time,
                     ShowUpDown = true,
@@ -407,8 +419,8 @@ namespace CalendarProject
                 };
 
                 // Buttons
-                Button btnSave = new Button() { Text = "Save", Left = 20, Top = 320, Width = 100 };
-                Button btnCancel = new Button() { Text = "Cancel", Left = 160, Top = 320, Width = 100 };
+                Button btnSave = new Button() { Text = "Save", Left = 20, Top = 300, Width = 100 };
+                Button btnCancel = new Button() { Text = "Cancel", Left = 160, Top = 300, Width = 100 };
 
                 // Validation and update
                 btnSave.Click += (s, args) =>
@@ -420,9 +432,12 @@ namespace CalendarProject
                         return;
                     }
 
-                    if (dtpEndTime.Value.TimeOfDay <= dtpStartTime.Value.TimeOfDay)
+                    DateTime startDateTime = dtpStartDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay);
+                    DateTime endDateTime = dtpEndDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay);
+
+                    if (endDateTime <= startDateTime)
                     {
-                        MessageBox.Show("End time must be after start time", "Invalid Times",
+                        MessageBox.Show("End date/time must be after start date/time", "Invalid Times",
                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
@@ -430,8 +445,8 @@ namespace CalendarProject
                     // temporary event to check for conflicts
                     Event updatedEvent = new Event(
                         txtTitle.Text,
-                        dtpDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay),
-                        dtpDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay)
+                        startDateTime,
+                        endDateTime
                     );
                     updatedEvent.Id = eventToEdit.Id;
                     updatedEvent.Owner = eventToEdit.Owner;
@@ -461,15 +476,19 @@ namespace CalendarProject
                 editForm.Controls.Add(txtTitle);
                 //editForm.Controls.Add(lblDescription);
                 //editForm.Controls.Add(txtDescription);
-                editForm.Controls.Add(lblDate);
-                editForm.Controls.Add(dtpDate);
+
+                editForm.Controls.Add(lblStartDate);
+                editForm.Controls.Add(dtpStartDate);
                 editForm.Controls.Add(lblStartTime);
                 editForm.Controls.Add(dtpStartTime);
+
+                editForm.Controls.Add(lblEndDate);
+                editForm.Controls.Add(dtpEndDate);
                 editForm.Controls.Add(lblEndTime);
                 editForm.Controls.Add(dtpEndTime);
+
                 editForm.Controls.Add(btnSave);
                 editForm.Controls.Add(btnCancel);
-
                 editForm.AcceptButton = btnSave;
                 editForm.CancelButton = btnCancel;
 
@@ -591,12 +610,11 @@ namespace CalendarProject
         private void AddEvent_Click()
         {
             string title = "New Event";
-            string description = "Event Description";
 
             using (Form inputForm = new Form())
             {
                 inputForm.Width = 300;
-                inputForm.Height = 400;
+                inputForm.Height = 500;
                 inputForm.Text = "New Event";
 
                 Label lblTitle = new Label()
@@ -613,51 +631,22 @@ namespace CalendarProject
                     Width = 240
                 };
 
-                Label lblDescription = new Label()
-                {
-                    Left = 20,
-                    Top = 70,
-                    Text = "Description:"
-                };
-
-                TextBox txtDescription = new TextBox()
-                {
-                    Left = 20,
-                    Top = 90,
-                    Width = 240,
-                    Height = 60,
-                    Multiline = true,
-                    ScrollBars = ScrollBars.Vertical
-                };
-
-                Label lblDate = new Label()
-                {
-                    Left = 20,
-                    Top = 160,
-                    Text = "Date:"
-                };
-
-                DateTimePicker dtpDate = new DateTimePicker()
+                Label lblStartDate = new Label() { Left = 20, Top = 160, Text = "Start Date:" };
+                DateTimePicker dtpStartDate = new DateTimePicker()
                 {
                     Left = 20,
                     Top = 180,
                     Width = 240,
                     Format = DateTimePickerFormat.Short
                 };
-
-                // set default
+                // default start date
                 if (selectedDayCell != null && selectedDayCell.Tag is DateTime)
                 {
-                    dtpDate.Value = (DateTime)selectedDayCell.Tag;
+                    dtpStartDate.Value = (DateTime)selectedDayCell.Tag;
                 }
 
-                Label lblStartTime = new Label()
-                {
-                    Left = 20,
-                    Top = 210,
-                    Text = "Start Time:"
-                };
 
+                Label lblStartTime = new Label() { Left = 20, Top = 210, Text = "Start Time:" };
                 DateTimePicker dtpStartTime = new DateTimePicker()
                 {
                     Left = 20,
@@ -666,36 +655,45 @@ namespace CalendarProject
                     Format = DateTimePickerFormat.Time,
                     ShowUpDown = true
                 };
-                dtpStartTime.Value = DateTime.Today.AddHours(9); //default 9am start
+                dtpStartTime.Value = DateTime.Today.AddHours(9); // 9am start
 
-                Label lblEndTime = new Label()
-                {
-                    Left = 20,
-                    Top = 260,
-                    Text = "End Time:"
-                };
-                DateTimePicker dtpEndTime = new DateTimePicker()
+                Label lblEndDate = new Label() { Left = 20, Top = 260, Text = "End Date:" };
+                DateTimePicker dtpEndDate = new DateTimePicker()
                 {
                     Left = 20,
                     Top = 280,
                     Width = 240,
+                    Format = DateTimePickerFormat.Short
+                };
+                // default to same as start
+                if (selectedDayCell != null && selectedDayCell.Tag is DateTime)
+                {
+                    dtpEndDate.Value = (DateTime)selectedDayCell.Tag;
+                }
+
+                Label lblEndTime = new Label() { Left = 20, Top = 310, Text = "End Time:" };
+                DateTimePicker dtpEndTime = new DateTimePicker()
+                {
+                    Left = 20,
+                    Top = 330,
+                    Width = 240,
                     Format = DateTimePickerFormat.Time,
                     ShowUpDown = true
                 };
-                dtpEndTime.Value = DateTime.Today.AddHours(10); //default 10am end
+                dtpEndTime.Value = DateTime.Today.AddHours(10); // default 10am
 
                 Button btnCreate = new Button()
                 {
                     Text = "Create",
                     Left = 20,
-                    Top = 320,
+                    Top = 370,
                     Width = 100
                 };
                 Button btnCancel = new Button()
                 {
                     Text = "Cancel",
                     Left = 160,
-                    Top = 320,
+                    Top = 370,
                     Width = 100
                 };
                 btnCreate.Click += (s, args) =>
@@ -708,53 +706,54 @@ namespace CalendarProject
                         return;
                     }
 
-                    if (dtpEndTime.Value.TimeOfDay <= dtpStartTime.Value.TimeOfDay)
+                    DateTime startDateTime = dtpStartDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay);
+                    DateTime endDateTime = dtpEndDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay);
+
+                    if (endDateTime <= startDateTime)
                     {
-                        MessageBox.Show("End time must be after start time", "Invalid Times",
+                        MessageBox.Show("End date/time must be after start date/time", "Invalid Times",
                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
                     //create event
                     title = txtTitle.Text;
-                    description = txtDescription.Text;
-                    inputForm.Tag = new Tuple<DateTime, DateTime, DateTime>(
-                        dtpDate.Value.Date,
-                        dtpStartTime.Value,
-                        dtpEndTime.Value
-                    );
+                    inputForm.Tag = new Tuple<DateTime, DateTime>(dtpStartDate.Value.Date.Add(dtpStartTime.Value.TimeOfDay),
+                dtpEndDate.Value.Date.Add(dtpEndTime.Value.TimeOfDay));
 
                     inputForm.DialogResult = DialogResult.OK;
                 };
+
                 btnCancel.Click += (s, args) => { inputForm.DialogResult = DialogResult.Cancel; };
 
                 // add controls
                 inputForm.Controls.Add(lblTitle);
                 inputForm.Controls.Add(txtTitle);
-                inputForm.Controls.Add(lblDescription);
-                inputForm.Controls.Add(txtDescription);
-                inputForm.Controls.Add(lblDate);
-                inputForm.Controls.Add(dtpDate);
+
+                inputForm.Controls.Add(lblStartDate);
+                inputForm.Controls.Add(dtpStartDate);
                 inputForm.Controls.Add(lblStartTime);
                 inputForm.Controls.Add(dtpStartTime);
+
+                inputForm.Controls.Add(lblEndDate);
+                inputForm.Controls.Add(dtpEndDate);
                 inputForm.Controls.Add(lblEndTime);
                 inputForm.Controls.Add(dtpEndTime);
+
                 inputForm.Controls.Add(btnCreate);
                 inputForm.Controls.Add(btnCancel);
-
                 inputForm.AcceptButton = btnCreate;
                 inputForm.CancelButton = btnCancel;
 
                 if (inputForm.ShowDialog() == DialogResult.OK)
                 {
                     // get event details and make the event
-                    var eventData = (Tuple<DateTime, DateTime, DateTime>)inputForm.Tag;
+                    var eventData = (Tuple<DateTime, DateTime>)inputForm.Tag;
                     DateTime eventDate = eventData.Item1;
                     DateTime startTime = eventData.Item2;
-                    DateTime endTime = eventData.Item3;
 
-                    DateTime startDateTime = eventDate.Date.Add(startTime.TimeOfDay);
-                    DateTime endDateTime = eventDate.Date.Add(endTime.TimeOfDay);
+                    DateTime startDateTime = eventData.Item1;
+                    DateTime endDateTime = eventData.Item2;
 
                     Event newEvent = new Event(
                         title,
